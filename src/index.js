@@ -17,6 +17,16 @@ class Instagram {
         })
             .then(res => Promise.resolve(res.data.data));
     }
+
+    async mediaEdgeSync(fields) {
+        const res = await this.instance.get("/me/media", {
+            params: {
+                fields: fields.toString(),
+                access_token: this.accessToken
+            }
+        });
+        return res.data.data;
+    }
 }
 
 export default Instagram;
