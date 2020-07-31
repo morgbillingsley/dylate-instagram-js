@@ -1,6 +1,6 @@
 {
   "name": "dylate-instagram-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A javascript library to use the instagram api with an access token",
   "main": "dist/index.js",
   "scripts": {
