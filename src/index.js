@@ -18,10 +18,11 @@ class Instagram {
             .then(res => Promise.resolve(res.data.data));
     }
 
-    async mediaEdgeSync(fields) {
+    async mediaEdgeSync(fields, length = 200) {
         const res = await this.instance.get("/me/media", {
             params: {
                 fields: fields.toString(),
+                length: length,
                 access_token: this.accessToken
             }
         });
